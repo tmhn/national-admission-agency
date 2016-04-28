@@ -1,0 +1,72 @@
+﻿@model Apollo.Data.Applicant_Profile
+
+@{
+    ViewBag.Title = "DeleteApplicant";
+}
+
+<h2 class="raleway">DeleteApplicant</h2>
+
+<h3 class="raleway">Are you sure you want to delete this?</h3>
+<div>
+    <h4 class="raleway">Applicant_Profile</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicantId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicantId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicantName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicantName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ApplicantAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicantAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UserId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

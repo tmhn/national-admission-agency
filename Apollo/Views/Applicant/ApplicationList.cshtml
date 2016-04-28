@@ -1,0 +1,131 @@
+﻿@model IEnumerable<Apollo.Data.BEANS.ApplicationBEAN>
+
+@{
+    ViewBag.Title = "ApplicationList";
+}
+
+<h2>Applications: @ViewBag.ApplicantName</h2>
+
+<div class="row" id="applicationBar">
+    
+    @if (Model.ToList().Count() < 5)
+    {
+        <div class="col-md-6 col-lg-6">
+            <h4 class="raleway">Application count: @Model.ToList().Count()</h4>
+        </div>
+        <div class="col-md-6 col-lg-6">
+            @Html.ActionLink("Create Application", "GetUniversityList", "Apollo", new { applicantId = ViewBag.ApplicantId }, new { @class = "btn btn-success", @id = "applicationMakeApplicationBtn" })
+        </div>
+    }
+    else
+    {
+        <h4 class="raleway">Application Count: 5. You Have Made All Applications</h4>
+    }
+
+</div>
+@*<hr />*@
+<table class="table" id="applicationTable">
+    <tr>
+        @*<th>
+            @Html.DisplayNameFor(model => model.ApplicantId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplicantName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplicantAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplicationId)
+        </th>*@
+        <th>
+            @Html.Label("Course Name")
+        </th>
+        <th>
+            @Html.Label("University Name")
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.PersonalStatement)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeacherReference)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TeacherContactDetails)
+        </th>*@
+        <th>
+            @Html.Label("University Offer")
+        </th>
+        <th>
+            @Html.Label("Firm")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.ApplicantId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicantName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicantAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicationId)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UniversityName)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.PersonalStatement)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TeacherReference)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TeacherContactDetails)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.UniversityOffer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Firm)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditApplication", new { applicantId = item.ApplicantId , universityOffer = item.UniversityOffer, applicationId = item.ApplicationId, universityName = item.UniversityName, courseName = item.CourseName }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Details", "ApplicationDetails", new { applicantId = item.ApplicantId, applicationId = item.ApplicationId }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Delete", "DeleteApplication", new { applicantId = item.ApplicantId, applicationId = item.ApplicationId, applicantName = item.ApplicantName }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>
+
+<hr />
+
+
+

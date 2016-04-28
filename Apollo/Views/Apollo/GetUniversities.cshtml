@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Apollo.Data.University>
+
+@{
+    ViewBag.Title = "GetUniversities";
+}
+
+<h2>Universities</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("University Name")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UniversityName)
+        </td>
+        <td>
+            @Html.ActionLink("Courses", "GetCourseList", new { id = item.UniversityId, universityName = item.UniversityName })
+            @*@Html.ActionLink("Edit", "Edit", new { id=item.UniversityId }) |*@
+            @*@Html.ActionLink("Details", "Details", new { id=item.UniversityId }) |*@
+            @*@Html.ActionLink("Delete", "Delete", new { id=item.UniversityId })*@
+        </td>
+    </tr>
+}
+
+</table>

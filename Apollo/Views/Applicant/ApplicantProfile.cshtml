@@ -1,0 +1,59 @@
+﻿@model Apollo.Data.Applicant_Profile
+
+@{
+    ViewBag.Title = "ApplicantProfile";
+}
+
+<h2>@Html.DisplayFor(model => model.ApplicantName)</h2>
+
+<div>
+    <h4>Profile</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.LabelFor(model => model.ApplicantName, "Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicantName)
+        </dd>
+
+        <dt>
+            @Html.LabelFor(model => model.ApplicantAddress, "Address")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicantAddress)
+        </dd>
+
+        <dt>
+             @Html.LabelFor(model => model.Phone, "Phone")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.LabelFor(model => model.Email, "Email")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.LabelFor(model => model.UserId, "User ID")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    
+    @Html.ActionLink("Back", "ApplicantList") |
+    @Html.ActionLink("Edit", "EditApplicant", new { id = Model.ApplicantId })
+</p>

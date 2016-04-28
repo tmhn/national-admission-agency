@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Apollo.Data.Applicant_Profile>
+
+@{
+    ViewBag.Title = "Profiles";
+}
+
+<h2>Applicants</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddApplicant")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.ApplicantId)*@
+            @Html.Label("Applicant ID")
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.ApplicantName)*@
+            @Html.Label("Applicant Name")
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicantId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicantName)
+        </td>
+        <td>
+            @Html.ActionLink("Profile", "ApplicantProfile", new { id = item.ApplicantId }) | 
+            @Html.ActionLink("Applications", "ApplicationList", new { id = item.ApplicantId, applicantName = item.ApplicantName}) 
+        </td>
+    </tr>
+}
+
+</table>

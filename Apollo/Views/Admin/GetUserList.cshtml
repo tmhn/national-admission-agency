@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Apollo.Data.Applicant_Profile>
+
+@{
+    ViewBag.Title = "GetUserList";
+}
+
+<h2>Apollo System Users</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("ID")
+        </th>
+        <th>
+            @Html.Label("Name")
+        </th>
+        @*<th>
+            @Html.Label("Address")
+        </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicantId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicantName)
+        </td>
+        @*<td>
+            @Html.DisplayFor(modelItem => item.ApplicantAddress)
+        </td>*@
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditApplicant", new { applicantId = item.ApplicantId, applicantName = item.ApplicantName, userId = item.UserId }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Details", "DetailsApplicant", new { applicantId = item.ApplicantId, userId = item.UserId }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Delete", "DeleteApplicant", new { applicantId = item.ApplicantId, userId = item.UserId }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,138 @@
+﻿@model Apollo.Data.BEANS.ApplicationBEAN
+
+@{
+    ViewBag.Title = "ApplicationDetails";
+}
+
+<h2>@Html.DisplayFor(model => model.CourseName)</h2>
+
+<div>
+    <h4>@Html.DisplayFor(model => model.UniversityName)</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Applicant Id")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicantId)
+        </dd>
+
+        <dt>
+            @Html.Label("Applicant Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicantName)
+        </dd>
+
+        <dt>
+            @Html.Label("Applicant Address")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicantAddress)
+        </dd>
+
+        <dt>
+            @Html.Label("Phone")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.Label("Email")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.Label("UserId")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+        <dt>
+            @Html.Label("Application Id")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationId)
+        </dd>
+
+        <dt>
+            @Html.Label("Course Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CourseName)
+        </dd>
+
+        <dt>
+            @Html.Label("University Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UniversityName)
+        </dd>
+
+        <dt>
+            @Html.Label("University Id")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UniversityId)
+        </dd>
+
+        <dt>
+            @Html.Label("Personal Statement")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonalStatement)
+        </dd>
+
+        <dt>
+            @Html.Label("Teacher Reference")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeacherReference)
+        </dd>
+
+        <dt>
+            @Html.Label("Teacher Contact Details")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TeacherContactDetails)
+        </dd>
+
+        <dt>
+            @Html.Label("University Offer")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UniversityOffer)
+        </dd>
+
+        <dt>
+            @Html.Label("Firm")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Firm)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to Applications", "ApplicationList", new { applicantId = Model.ApplicantId, applicantName = Model.ApplicantName }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Edit", "EditApplication", new { applicationId = Model.ApplicationId, universityName = Model.UniversityName, courseName = Model.CourseName }, new { @class = "btn btn-info" })
+</p>

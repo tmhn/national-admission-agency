@@ -1,0 +1,12 @@
+F:\MyWork\Visual Studio 2013\Projects\Apollo\Lunar.Services\bin\Debug\Lunar.Services.dll.config
+F:\MyWork\Visual Studio 2013\Projects\Apollo\Lunar.Services\bin\Debug\Lunar.Services.dll
+F:\MyWork\Visual Studio 2013\Projects\Apollo\Lunar.Services\bin\Debug\Lunar.Services.pdb
+F:\MyWork\Visual Studio 2013\Projects\Apollo\Lunar.Services\obj\Debug\Lunar.Services.dll
+F:\MyWork\Visual Studio 2013\Projects\Apollo\Lunar.Services\obj\Debug\Lunar.Services.pdb
+F:\MyWork\Visual Studio 2013\Projects\Apollo\Lunar.Services\obj\Debug\Lunar.Services.csprojResolveAssemblyReference.cache
+F:\MyWork\Visual Studio 2013\Projects\ApolloGamma\Lunar.Services\bin\Debug\Lunar.Services.dll.config
+F:\MyWork\Visual Studio 2013\Projects\ApolloGamma\Lunar.Services\bin\Debug\Lunar.Services.dll
+F:\MyWork\Visual Studio 2013\Projects\ApolloGamma\Lunar.Services\bin\Debug\Lunar.Services.pdb
+F:\MyWork\Visual Studio 2013\Projects\ApolloGamma\Lunar.Services\obj\Debug\Lunar.Services.csprojResolveAssemblyReference.cache
+F:\MyWork\Visual Studio 2013\Projects\ApolloGamma\Lunar.Services\obj\Debug\Lunar.Services.dll
+F:\MyWork\Visual Studio 2013\Projects\ApolloGamma\Lunar.Services\obj\Debug\Lunar.Services.pdb

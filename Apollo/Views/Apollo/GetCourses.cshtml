@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Apollo.Services.BEANS.CourseBEAN>
+
+@{
+    ViewBag.Title = "GetCourses";
+}
+
+<h2 class="raleway">@ViewBag.UniversityName Courses</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.CourseBEANName)*@
+            @Html.Label("Name")
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.CourseBEANDescription)*@
+            @Html.Label("Description")
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.CourseBEANEntryRequirements)*@
+            @Html.Label("Entry Requirements")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseBEANName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseBEANDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CourseBEANEntryRequirements)
+        </td>
+
+        @if (Request.IsAuthenticated)
+        { 
+            <td>
+                @Html.ActionLink("Apply", "CreateApplication", new { UniversityName = ViewBag.UniversityName, UniversityId = ViewBag.UniversityId, CourseName = item.CourseBEANName, ApplicantId = ViewBag.ApplicantId, controller = "Applicant" }, new { @class = "btn btn-success" })
+            </td>
+        }
+    </tr>
+}
+
+</table>
+<div>
+    @Html.ActionLink("Back to Universities", "GetUniversityList", new { applicantId = ViewBag.ApplicantId, applicantName = ViewBag.ApplicantName }, new { @class = "btn btn-primary" })
+</div>

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Apollo.Data.University>
+
+@{
+    ViewBag.Title = "StaffUniversityList";
+}
+
+<h2>Universities</h2>
+
+<p>
+    @Html.ActionLink("Create New", "AddUniversity", new { applicantId = ViewBag.ApplicantId, userId = ViewBag.UserId }, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.Label("University Name")
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UniversityName)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { universityId = item.UniversityId, applicantId = ViewBag.applicantId, userId = ViewBag.UserId }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Details", "Details", new { universityId = item.UniversityId, userId = ViewBag.UserId }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Delete", "Delete", new { universityId = item.UniversityId, userId = ViewBag.UserId }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

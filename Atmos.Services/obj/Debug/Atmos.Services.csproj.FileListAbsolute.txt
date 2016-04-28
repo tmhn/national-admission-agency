@@ -1,0 +1,12 @@
+F:\MyWork\Visual Studio 2013\Projects\Apollo\Atmos.Services\bin\Debug\Atmos.Services.dll.config
+F:\MyWork\Visual Studio 2013\Projects\Apollo\Atmos.Services\bin\Debug\Atmos.Services.dll
+F:\MyWork\Visual Studio 2013\Projects\Apollo\Atmos.Services\bin\Debug\Atmos.Services.pdb
+F:\MyWork\Visual Studio 2013\Projects\Apollo\Atmos.Services\obj\Debug\Atmos.Services.csprojResolveAssemblyReference.cache
+F:\MyWork\Visual Studio 2013\Projects\Apollo\Atmos.Services\obj\Debug\Atmos.Services.dll
+F:\MyWork\Visual Studio 2013\Projects\Apollo\Atmos.Services\obj\Debug\Atmos.Services.pdb
+F:\MyWork\Visual Studio 2013\Projects\ApolloGamma\Atmos.Services\bin\Debug\Atmos.Services.dll.config
+F:\MyWork\Visual Studio 2013\Projects\ApolloGamma\Atmos.Services\bin\Debug\Atmos.Services.dll
+F:\MyWork\Visual Studio 2013\Projects\ApolloGamma\Atmos.Services\bin\Debug\Atmos.Services.pdb
+F:\MyWork\Visual Studio 2013\Projects\ApolloGamma\Atmos.Services\obj\Debug\Atmos.Services.dll
+F:\MyWork\Visual Studio 2013\Projects\ApolloGamma\Atmos.Services\obj\Debug\Atmos.Services.pdb
+F:\MyWork\Visual Studio 2013\Projects\ApolloGamma\Atmos.Services\obj\Debug\Atmos.Services.csprojResolveAssemblyReference.cache

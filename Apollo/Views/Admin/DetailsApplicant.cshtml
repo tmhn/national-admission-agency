@@ -1,0 +1,66 @@
+﻿@model Apollo.Data.Applicant_Profile
+
+@{
+    ViewBag.Title = "DetailsApplicant";
+}
+
+<h2 class="raleway">User Details</h2>
+
+<div>
+    <h4 class="raleway">Apollo User</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("Applicant Id")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicantId)
+        </dd>
+
+        <dt>
+            @Html.Label("Applicant Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicantName)
+        </dd>
+
+        <dt>
+            @Html.Label("Applicant Address")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicantAddress)
+        </dd>
+
+        <dt>
+            @Html.Label("Phone")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.Label("Email")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.Label("User Id")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back to List", "GetUserList", new { userId = Model.UserId }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Edit", "EditApplicant", new { applicantId = Model.ApplicantId, applicantName = Model.ApplicantName, userId = Model.UserId }, new { @class = "btn btn-info" })
+</p>

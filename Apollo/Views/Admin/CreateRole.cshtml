@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "CreateRole";
+}
+
+<h2 class="raleway">Create User Role</h2>
+
+<hr />
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <div class="raleway">Role Name</div>
+    <p class="raleway">@Html.TextBox("RoleName")</p>
+    <input type="submit" value="Save" class="btn btn-success" />
+}
+<hr />
+@Html.ActionLink("Back to Profile", "Index", new { userId = ViewBag.UserId }, new { @class = "btn btn-primary"})
+@Html.ActionLink("Manage User Roles", "ManageUserRoles", new { userId = ViewBag.UserId }, new { @class = "btn btn-primary" })
+

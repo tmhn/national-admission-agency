@@ -1,0 +1,74 @@
+﻿@model Apollo.Data.Applicant_Profile
+
+@{
+    ViewBag.Title = "User Profile";
+}
+
+<h2 class="raleway">Welcome @Html.DisplayFor(model => model.ApplicantName)!</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <h4 class="raleway">Your Profile</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.Label("Applicant ID")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ApplicantId)
+            </dd>
+
+            <dt>
+                @Html.Label("Name")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ApplicantName)
+            </dd>
+
+            <dt>
+                @Html.Label("Address")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ApplicantAddress)
+            </dd>
+
+            <dt>
+                @Html.Label("Phone")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Phone)
+            </dd>
+
+            <dt>
+                @Html.Label("Email")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+
+            <dt>
+                @Html.Label("User ID")
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.UserId)
+            </dd>
+
+        </dl>
+    </div>
+
+    <div class="col-md-4">
+        <h4 class="raleway">Options</h4>
+        <hr />
+        <h5 class="raleway">Students can only produce 5 University Applications</h5> 
+            @*@Html.ActionLink("Create Application", "GetUniversityList", "Apollo", new { applicantId = Model.ApplicantId }, new { @class = "btn btn-primary btn-lg btn-block" })*@
+            @Html.ActionLink("Manage Applications", "ApplicationList", "Applicant", new { applicantId = Model.ApplicantId, applicantName = Model.ApplicantName }, new { @class = "btn btn-primary btn-lg btn-block" })
+            @Html.ActionLink("Edit Profile", "EditApplicant", new { id = Model.ApplicantId, applicantName = Model.ApplicantName }, new { @class = "btn btn-primary btn-lg btn-block" })
+    </div> 
+</div>
+

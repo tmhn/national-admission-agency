@@ -1,0 +1,26 @@
+﻿@model Apollo.Data.University
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 class="raleway">Details: @Html.DisplayFor(model => model.UniversityName)</h2>
+
+<div>
+    <h4 class="raleway">University Details</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.Label("University Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UniversityName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.UniversityId }) |*@
+    @Html.ActionLink("Back to List", "StaffUniversityList", new { userId = ViewBag.UserId }, new { @class = "btn btn-primary" })
+</p>

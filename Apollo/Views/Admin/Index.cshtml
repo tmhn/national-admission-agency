@@ -1,0 +1,72 @@
+﻿@model Apollo.Data.Applicant_Profile
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="raleway">Welcome @Html.DisplayFor(model => model.ApplicantName)!</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <h4 class="raleway">Admin Account</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           @Html.Label("Applicant ID")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicantId)
+        </dd>
+
+        <dt>
+            @Html.Label("Name")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicantName)
+        </dd>
+
+        <dt>
+            @Html.Label("Address")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ApplicantAddress)
+        </dd>
+
+        <dt>
+            @Html.Label("Phone")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.Label("Email")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.Label("User ID")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UserId)
+        </dd>
+
+    </dl>
+    </div>
+    <div class="col-md-4">
+        <h4 class="raleway">Options</h4>
+        <hr />
+        @Html.ActionLink("Create Role", "CreateRole", "Admin", new {userId = Model.UserId}, new { @class = "btn btn-primary btn-lg btn-block" })
+        @Html.ActionLink("See Users", "GetUserList", "Admin", new { userId = Model.UserId }, new { @class = "btn btn-primary btn-lg btn-block" })
+        @Html.ActionLink("See User Roles", "GetRoles", "Admin", new { @class = "btn btn-primary btn-lg btn-block" })
+        @Html.ActionLink("Manage User Roles", "ManageUserRoles", "Admin", new { @class = "btn btn-primary btn-lg btn-block" })
+    </div>
+</div>

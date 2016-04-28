@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Apollo</h1>
+    <p class="lead">Meet Apollo. Making higher education applications easier</p>
+    @*<p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Universities", "GetUniversities", "Apollo")</h2>
+        <p>
+            <ul>
+                <li>See the Universities that you can apply to!</li>
+                @*<li>Your application architecture incorporates separation of Application, Service and Data tiers</li>*@
+            </ul>
+        </p>
+    </div>
+    @*<div class="col-md-4">
+        <h2>@Html.ActionLink("Submission 2", "ApplicantList", "Applicant")</h2>
+        <p>
+            <ul>
+                <li>Applicant is able to create profile in the database</li>
+                <li>Applicant is able to edit their profile in the database</li>
+            </ul>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>@Html.ActionLink("Submission 3", "ApplicationList", "Applicant")</h2>
+        <p>
+            <ul>
+                <li>Applicant can create applications</li>
+                <li>Applications for Universities exposed by Web Services</li>
+            </ul>
+        </p>
+    </div>*@
+</div>
